@@ -9,6 +9,9 @@ body {
   box-sizing: border-box;
   color: #fff;
  }
+
+ html, body, #map { height: 100%; margin: 0; }
+
  body > main {
   height: 85vh;
  }

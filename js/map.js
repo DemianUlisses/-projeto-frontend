@@ -1,10 +1,11 @@
 
-          document.addEventListener('DOMContentLoaded', function(){
+        document.addEventListener('DOMContentLoaded', function(){
 
         var target = document.querySelector('#map');
         
         navigator.geolocation.getCurrentPosition(function(position) {
     
+           
             var latitude   = position.coords.latitude;
             var longitude  = position.coords.longitude;
             var coordinate = new google.maps.LatLng(latitude, longitude);
@@ -21,7 +22,7 @@
             var configMarker = {
                                  position : coordinate,
                                  map : map,
-                                 title: "Você está aqui!"
+                                 title: "Você está Nesse local!"
                                 };
     
             var marker = new google.maps.Marker(configMarker);
