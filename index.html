@@ -27,6 +27,46 @@
 </head>
 
 <body>
+
+  <nav>
+    <a href="#">Rota</a>
+    <ul>
+      <li><a href="#coordenadas">Coordenadas</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <div class="topo" id="map"></div>
+
+  <section class="coordenadas">
+    <div class="coordenadas__box">
+      <h3>Latitude</h3>
+      <p id="lat"></p>
+    </div>
+  
+    <div class="coordenadas__box">
+      <h3>Longitude</h3>
+      <p id="long"></p>
+    </div>
+  </section>
+
+<section id="sobre">
+  <h2>Sobre</h2>
+  <p >
+    Dicas:
+    Pense no que você está fazendo como um pequeno produto digital que você está construindo;
+    Esboce o seu layout numa folha de papel. Pense simples.
+    Identifique quais elementos visuais (ou componentes visuais) existem nesse produto. Cabeçalho superior, área da aplicação, botões, áreas que aparecem conteúdo ao clicar em um botão ou ao carregar área.
+    Cada componente visual identificado, pode ser um arquivo SASS diferente que pode ser importado para o principal.
+    Ao identificar e visualizar os componentes visuais de sua webapp, fica mais fácil pensar na metodologia adequada para nomeação de classes CSS.
+    Não se preocupe em demasiado com a aparência. O design é função antes de ser aparência.
+    Desafio extra: Se você quer ganhar alguns pontos extras e se desenvolver na estilização, inpire-se buscando "css templates" ou ainda "admin templates" no Google que você vai encontrar vários exemplos gratuitos de estilização CSS. Se você fizer um layout um pouco mais sofisticado, posso dar alguns pontos extras para quem perdeu pontos em atividades anteriores.
+  </p>
+</section>
+<footer>
+  <a href="#topo" class="btn btn--primary">VOLTAR AO TOPO</a>
+</footer>
+
   <script src="js/map.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
@@ -34,8 +74,6 @@
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-2z-5jTMwWpbOISlPnuxSPfvUHfhSvOI&callback=initMap"
   type="text/javascript"></script>
-  <div id="map"></div> 
-
+ 
 </body>
-
 </html>

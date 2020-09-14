@@ -1,3 +1,5 @@
+var plag = document.getElementById('lat');
+var plong = document.getElementById('long');
 
         document.addEventListener('DOMContentLoaded', function(){
 
@@ -24,8 +26,10 @@
                                  map : map,
                                  title: "Você está Nesse local!"
                                 };
-    
             var marker = new google.maps.Marker(configMarker);
+
+            plag.innerHTML  = latitude;
+            plong.innerHTML = longitude;
     
         });
     });
