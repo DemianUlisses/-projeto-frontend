@@ -8,9 +8,9 @@ var plong = document.getElementById('long');
         navigator.geolocation.getCurrentPosition(function(position) {
     
            
-            var latitude   = position.coords.latitude;
-            var longitude  = position.coords.longitude;
-            var coordinate = new google.maps.LatLng(latitude, longitude);
+            const latitude   = position.coords.latitude;
+            const longitude  = position.coords.longitude;
+            const coordinate = new google.maps.LatLng(latitude, longitude);
     
             
             var optionsMap = {
