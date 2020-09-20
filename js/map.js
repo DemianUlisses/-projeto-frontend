@@ -1,11 +1,12 @@
 var plag = document.getElementById('lat');
 var plong = document.getElementById('long');
+var dife = document.getElementById('Dif');
 
         document.addEventListener('DOMContentLoaded', function(){
 
         var target = document.querySelector('#map');
         
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition( async function(position) {
     
             var mySet = new Set();
 
@@ -31,12 +32,18 @@ var plong = document.getElementById('long');
                                  title: "Você está Nesse local!"
                                 };
             var marker = new google.maps.Marker(configMarker);
-
            
             plag.innerHTML  = latitude;
             plong.innerHTML = longitude;
+            dife.innerHTML  =   differec(latitude,longitude);
+
+    
     
         });
+       
+        function differec (latitude,longitude) {
+            return latitude - longitude;
+        };
 
         function init() {
           var myLatlng = new google.maps.LatLng(34.04, -118.24);
@@ -49,12 +56,7 @@ var plong = document.getElementById('long');
           var map = new google.maps.Map(document.getElementById('map'), myOptions);
       
         }
-      
-        google.maps.event.addDomListener(window, 'load', init);
-
-
-      
-
+   
 
 
         
