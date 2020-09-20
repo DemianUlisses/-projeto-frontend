@@ -12,11 +12,13 @@ var dife = document.getElementById('Dif');
 
             const latitude   = position.coords.latitude;
             const longitude  = position.coords.longitude;
-            const coordinate = new google.maps.LatLng(latitude, longitude);
+            var coordinate = new google.maps.LatLng(latitude, longitude);
     
             mySet.add(latitude);
             mySet.add(longitude);
             mySet.add(coordinate);
+
+  
 
             var optionsMap = {
                         center : coordinate,
@@ -25,20 +27,12 @@ var dife = document.getElementById('Dif');
             };
     
             var map = new google.maps.Map(target, optionsMap);
-    
-            var configMarker = {
-                                 position : coordinate,
-                                 map : map,
-                                 title: "Você está Nesse local!"
-                                };
-            var marker = new google.maps.Marker(configMarker);
-           
+
+            mySet.has(latitude);
+ 
             plag.innerHTML  = latitude;
             plong.innerHTML = longitude;
             dife.innerHTML  =   differec(latitude,longitude);
-
-    
-    
         });
        
         function differec (latitude,longitude) {
