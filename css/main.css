@@ -155,5 +155,12 @@ footer a {
     max-width: 1000px;
     margin: 0 auto;
   }
-
+  .tab-panel[aria-hidden="true"] {
+    display: none;
+    }
+    
+  .tab-panel[aria-hidden="false"] {
+    display: block;
+    }
+    
 }

@@ -1,67 +1,18 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-  <meta charset="utf-8">
-  <title>Projeto Front-end</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
+<!DOCTYPE html>
+<html>
+  <head><title>Gracefully degrading progress bar</title></head>
+  
   <link rel="stylesheet" href="css/main.css">
-  <meta name="theme-color" content="#fafafa">
-</head>
+  <body>
 
-<body>
+    <progress id="progress-bar" value="0" max="100">0% complete</progress>
+    <button id="update-button" onclick="window.location.href = 'index.html'">Atualizar o mapa</button>
 
- <header id="topo">
-    <h1 class="city"></h1>
-    <h1><span>0</span>ºC</h1>
-</header>
-
-<section class="coordenadas">
-  <div class="coordenadas__box">
-    <h3>Latitude</h3>
-    <p id="lat"></p>
-  </div>
-
-  <div class="coordenadas__box">
-    <h3>Longitude</h3>
-    <p id="long"></p>
-  </div>
-</section>
-
-<section id="sobre">
-  <h2>SOBRE</h2>
-  <p>
-    Este sistema foi desenvolvido pelo aluno Diego Silveira utilizando a API de geolocalização do HTML5 para estudos da disciplina de front-end avançado da Universidade PUC Minas.
-  </p>
-</section>
-
-<footer>
-  <a href="#topo" class="btn btn--primary">VOLTAR AO TOPO</a>
-</footer>
+    <script src="js/Aria.js"></script>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   
-  
-  
-  <script src="js/map.js"></script>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/plugins.js"></script>
-  
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-2z-5jTMwWpbOISlPnuxSPfvUHfhSvOI&callback=initMap"
-  type="text/javascript"></script>
-  <div id="map"></div> 
-
-</body>
-
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-2z-5jTMwWpbOISlPnuxSPfvUHfhSvOI&callback=initMap"
+    type="text/javascript"></script>
+ 
+  </body>
 </html>
